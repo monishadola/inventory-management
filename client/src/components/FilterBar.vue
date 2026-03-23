@@ -102,84 +102,85 @@ export default {
 
 <style scoped>
 .filters-bar {
-  background: #f8fafc;
-  border-bottom: 1px solid #e2e8f0;
-  padding: 0.75rem 0;
-  position: sticky;
-  top: 70px;
-  z-index: 90;
+  background: transparent;
+  padding: 0;
 }
 
 .filters-container {
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+  padding: 0.625rem 0.75rem 0.75rem;
 }
 
 .filters-grid {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex: 1;
+  flex-direction: column;
+  gap: 0.625rem;
 }
 
 .filter-group {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .filter-group label {
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   font-weight: 600;
   color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
   white-space: nowrap;
 }
 
 .filter-select {
-  padding: 0.4rem 0.75rem;
-  border: 1px solid #cbd5e1;
+  width: 100%;
+  padding: 0.375rem 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 6px;
-  font-size: 0.813rem;
-  color: #0f172a;
-  background: white;
+  font-size: 0.8rem;
+  color: #e2e8f0;
+  background: #0f172a;
   cursor: pointer;
-  transition: all 0.2s;
-  font-weight: 500;
-  min-width: 140px;
+  transition: border-color 0.15s;
+  font-weight: 400;
+  appearance: auto;
 }
 
 .filter-select:hover {
-  border-color: #94a3b8;
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .filter-select:focus {
   outline: none;
   border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.15);
+}
+
+.filter-select option {
+  background: #1e293b;
+  color: #e2e8f0;
 }
 
 .reset-filters-btn {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.4rem;
+  width: 100%;
+  margin-top: 0.375rem;
   padding: 0.4rem;
-  background: white;
-  border: 1px solid #e2e8f0;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 6px;
   color: #64748b;
   cursor: pointer;
-  transition: all 0.2s;
-  flex-shrink: 0;
+  transition: all 0.15s;
+  font-size: 0.75rem;
 }
 
 .reset-filters-btn:hover:not(:disabled) {
-  background: #f8fafc;
-  border-color: #cbd5e1;
-  color: #0f172a;
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #94a3b8;
 }
 
 .reset-filters-btn:disabled {
@@ -188,7 +189,7 @@ export default {
 }
 
 .reset-filters-btn svg {
-  width: 18px;
-  height: 18px;
+  width: 14px;
+  height: 14px;
 }
 </style>
